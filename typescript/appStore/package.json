@@ -1,5 +1,5 @@
 {
-  "name": "@typescript/app2",
+  "name": "@typescript/appstore",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
@@ -20,13 +20,16 @@
   "scripts": {
     "start": "webpack-cli serve",
     "build": "webpack --mode production",
-    "serve": "serve dist -p 3002",
+    "serve": "serve dist -p 3001",
     "clean": "rm -rf dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
+    "global": "^4.4.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "rimraf": "^3.0.2"
   }
 }

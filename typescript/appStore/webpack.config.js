@@ -10,7 +10,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    port: 3001,
+    port: 3003,
   },
   output: {
     publicPath: "auto",
@@ -39,12 +39,13 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "app1",
-      remotes: {
-        app2: "app2@http://localhost:3002/remoteEntry.js",
-        appstore: "appstore@http://localhost:3003/remoteEntry.js"
+      name: "appstore",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./store": "./src/store",
+        "./counterSlice": "./src/counterSlice"
       },
-      shared: ["react", "react-dom", "react-redux", "@reduxjs/toolkit"],
+      shared: ["react", "react-dom"],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

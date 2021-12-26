@@ -44,7 +44,7 @@ module.exports = {
       exposes: {
         "./Button": "./src/Button",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-redux", "@reduxjs/toolkit"],
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
