@@ -44,6 +44,9 @@ module.exports = {
       exposes: {
         "./Button": "./src/Button",
       },
+      remotes: {
+        appstore: "appstore@http://localhost:3003/remoteEntry.js"
+      },
       shared: ["react", "react-dom", "react-redux", "@reduxjs/toolkit"],
     }),
     new HtmlWebpackPlugin({

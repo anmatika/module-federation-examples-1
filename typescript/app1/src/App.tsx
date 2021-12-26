@@ -19,14 +19,14 @@ const App = () => {
         aria-label="Increment value"
         onClick={() => dispatch(counterSlice.increment())}
       >
-        Increment
+        app1 inc
       </button>
       <span>{count}</span>
       <button
         aria-label="Decrement value"
         onClick={() => dispatch(counterSlice.decrement())}
       >
-        Decrement
+        app1 dec
       </button>
     </React.Suspense>
   </div >)
