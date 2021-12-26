@@ -7,9 +7,7 @@ declare module "appstore/store" {
 }
 
 declare module "appstore/counterSlice" {
-  const counterSlice: any
-
-
-  export default counterSlice;
+  export function increment(): void;
+  export function decrement(): void;
+  export function incrementByAmount(value: number): void;
 }
-

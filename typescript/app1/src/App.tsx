@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useSelector, useDispatch, ReactReduxContext } from 'react-redux'
-import * as counterSlice from "appstore/counterSlice";
+import { increment, decrement } from "appstore/counterSlice";
 const RemoteButton = React.lazy(() => import("app2/Button"));
 
 const App = () => {
@@ -17,14 +17,14 @@ const App = () => {
       <RemoteButton store={store} />
       <button
         aria-label="Increment value"
-        onClick={() => dispatch(counterSlice.increment())}
+        onClick={() => dispatch(increment())}
       >
         app1 inc
       </button>
       <span>{count}</span>
       <button
         aria-label="Decrement value"
-        onClick={() => dispatch(counterSlice.decrement())}
+        onClick={() => dispatch(decrement())}
       >
         app1 dec
       </button>

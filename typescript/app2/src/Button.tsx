@@ -1,4 +1,4 @@
-import * as counterSlice from "appstore/counterSlice";
+import { incrementByAmount } from "appstore/counterSlice";
 import * as React from "react";
 import { connect, useDispatch } from "react-redux";
 
@@ -13,7 +13,7 @@ const Button = ({ counter }: State) => {
 
   return (<div>
     <span>{counter.value}</span>
-    <button onClick={() => dispatch(counterSlice.incrementByAmount(10))}>App2 inc +10</button>
+    <button onClick={() => dispatch(incrementByAmount(10))}>App2 inc +10</button>
   </div>)
 }
 
